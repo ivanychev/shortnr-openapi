@@ -28,6 +28,13 @@ paths:
       summary: Get a URL
       description: Get a URL
       operationId: getShortUrl
+      parameters:
+        - in: path
+          name: shortUrl
+          schema:
+            type: string
+          required: true
+          description: The short URL to translate to URL.
       responses:
         '200':
           description: Successful operation

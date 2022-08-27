@@ -22,10 +22,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ShortUrl'
-        '400':
-          description: Invalid ID supplied
         '405':
-          description: Validation exception
+          description: Invalid input
     get:
       summary: Get a URL
       description: Get a URL
@@ -37,10 +35,10 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ShortUrl'
-        '405':
-          description: Invalid input
         '404':
           description: Url not found
+        '405':
+          description: Invalid input
 components:
   schemas:
     ShortUrlRequest:
@@ -55,6 +53,6 @@ components:
         url:
           type: string
           example: "http://yandex.ru/maps"
-        shortenUrl:
+        shortUrl:
           type: string
           example: "http://bit.ly"
